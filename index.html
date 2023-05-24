@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* BÀI 1 */
+        // let list1 = [1, 2, 5];
+        // let list2 = [3, 7, 2];
+        // let array = list1.concat(list2);
+        // function sort(arr){
+        //     for(let i=0; i < arr.length -1; i++){
+        //         for(let j = 0; j < arr.length -1 -i; j++){
+        //             if (arr[j] > arr[j + 1]) {
+        //                 let temp = arr[j];
+        //                     arr[j] = arr[j + 1];
+        //                     arr[j + 1] = temp;
+        //             }
+        //         }
+        //     }
+        //     return document.write(`Sắp xếp giá trị tăng dần: ${arr}`);
+        // }
+        // sort(array)
+
+
+        /* BÀI 2 
+            IN RA VỊ TRÍ 2 SỐ CÓ TỔNG LÀ TARGET 
+        */
+        // let numbers = [1, 0, 3, 11, 6, 15,];
+        // let target = 9;
+        // function findIndexTarget(numbers) {
+        //     for (let i = 0; i < numbers.length - 1; i++) {
+        //         for (let j = i + 1; j < numbers.length; j++) {
+        //             if (numbers[i] + numbers[j] === target) {
+        //                 return [[i], [j]];
+        //             }
+        //         }
+        //     }
+        //     return "Không thỏa mãn";
+        // }
+        // let result = findIndexTarget(numbers);
+        // console.log(result);
+
+        /* BÀI 3*/
+        
+        let arr = ["flower", "fly", "flight"]
+        let character = [];
+        for (let i = 0; i < arr.length; i++) {
+            let word = arr[i]
+            for(let j=0; j < arr.length; j++){
+                let letter = word[j]
+                if(character[letter]){
+                    character[letter]++
+                }else{
+                    character[letter] = 1;
+                }
+            }
+        }
+        let result = []
+        for(let letter in character){
+            if(character[letter] === arr.length){
+                result.push(letter)
+            }
+        }
+        console.log(result);
+        
+        
+
+
+
+    </script>
+</body>
+
+</html>
